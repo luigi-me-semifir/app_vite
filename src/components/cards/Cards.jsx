@@ -1,12 +1,11 @@
 import styles from "./Cards.module.css";
 
-const Cards = ({ title, body }) => {
+const Cards = ({ nom, prenom }) => {
   return (
     <>
       <h1 className={styles.red}>
-        Bonjour {title} {body}
+        Bonjour {nom} {prenom}
       </h1>
-      <p className={styles.paragraphe}>Je suis le paragraphe</p>
     </>
   );
 };

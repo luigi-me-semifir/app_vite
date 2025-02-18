@@ -4,13 +4,23 @@ const PostsApi = {
    * @returns Liste de posts
    */
   getPosts: () => {
-    return fetch("https://jsonplaceholder.typicode.com/posts")
+    return fetch("http://localhost:8080/posts")
       .then((response) => response.json())
   },
 
   getPostsById: (id) => {
-    return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    return fetch(`http://localhost:8080/posts/${id}`)
       .then((response) => response.json())
+  },
+
+  addUser: (user) => {
+    return fetch('http://localhost:8080/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user)
+    }).then((response) => response.json())
   }
 }
 
