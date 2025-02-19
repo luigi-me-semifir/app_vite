@@ -21,6 +21,17 @@ const PostsApi = {
       },
       body: JSON.stringify(user)
     }).then((response) => response.json())
+  },
+
+  deleteUser: (user) => {
+    return fetch(`http://localhost:8080/posts/${user}`, {
+      method: 'DELETE',
+      headers: { "content-type": "application/json" }
+    }).then(() => {
+      console.log(`Post ${user} supprimé`)
+    }).catch((error) => {
+      console.error(`Erreur lors de la suppression :`, error);
+    })
   }
 }
 

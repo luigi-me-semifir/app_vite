@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Accueil from "../pages/accueil/Accueil";
 import Detail from "../pages/Detail/Detail";
 import ErrorPage from "../pages/404/ErrorPage";
-import RoutesDinamyque from "../pages/routes Dynamique/RoutesDynamique";
+import RoutesDinamyque from "../pages/routesDynamique/RoutesDynamique";
 
 const RoutesPosts = () => {
   return (
